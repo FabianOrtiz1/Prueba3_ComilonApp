@@ -1,52 +1,46 @@
-$.validator.setDefaults({
-    submitHandler: function () {
-      alert("submitted!");
-      
-    },
-  });
   
   $(document).ready(function () {
     $("#signupForm").validate({
       rules: {
-        fullname: {
+        nombre: {
           required: true,
           minlength: 5,
         },
         comments: {
           required: true,
         },
-        password: {
+        contraseña: {
           required: true,
           minlength: 5,
         },
-        confirm_password: {
+        repetir_contraseña: {
           required: true,
           minlength: 5,
-          equalTo: "#password",
+          equalTo: "#contraseña",
         },
-        email: {
+        correo: {
           required: true,
           email: true,
         },
         agree: "required",
       },
       messages: {
-        fullname: {
+        nombre: {
           required: "Por favor ingresa tu nombre completo",
           minlength: "Tu nombre debe ser de no menos de 5 caracteres",
         },
-        password: {
+        contraseña: {
           required: "Por favor ingresa una contraseña",
           minlength:
             "Tu contraseña debe ser de no menos de 5 caracteres de longitud",
         },
-        confirm_password: {
+        repetir_contraseña: {
           required: "Ingresa una contraseña",
           minlength:
             "Tu contraseña debe ser de no menos de 5 caracteres de longitud",
           equalTo: "Por favor ingresa la misma contraseña de arriba",
         },
-        email: "Por favor ingresa un correo válido",
+        correo: "Por favor ingresa un correo válido",
         agree: "Por favor acepta nuestra política",
         sexo: {
           required: "Por favor",
